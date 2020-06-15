@@ -15,30 +15,31 @@ const PackageSelect = (props) => {
     }, [versionList])
 
     function downloadPackage() {
-        console.log(version)
         const [versionLabel, notVersionLabel] = ["Release", "Debug"]
         setLoading(true)
         if (version !== null) {
             console.log('here')
             if (version.downloadLink) {
                 const [user, repo] = name.split('/')
-                // const file = fs.createWriteStream(`${outputDir}/${user}${repo}-${version.release_version}.zip`)
-                // file.on('finish', () => file.close())
 
                 return Axios
-                    .get(`https://cors-anywhere.herokuapp.com/${version.downloadLink}`,
+                    .get(`${version.downloadLink}`,
                         { responseType: "blob" }
                     )
                     .then((response) => {
                         const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
                         const link = document.createElement('a');
                         link.href = downloadUrl;
-                        link.setAttribute('download', `${user}${repo}-${version.release_version}.zip`); //any other extension
+                        link.setAttribute('download', `${user}${repo}-${version.release_version}.zip`);
                         document.body.appendChild(link);
                         link.click();
                         link.remove();
+                        setLoading(false)
                     })
-                    .catch(err => console.log(err))
+                    .catch(err => {
+                        console.log(err)
+                        setLoading(false)
+                    })
             } else {
                 console.log('here 2')
                 const [user, repo] = name.split('/')
@@ -68,7 +69,7 @@ const PackageSelect = (props) => {
                         filteredUrl.forEach(fileURL => {
 
                             Axios
-                                .get(`https://cors-anywhere.herokuapp.com/${fileURL.url}`, { responseType: "blob" })
+                                .get(`${fileURL.url}`, { responseType: "blob" })
                                 .then(response => {
                                     const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
                                     const link = document.createElement('a');
@@ -77,14 +78,16 @@ const PackageSelect = (props) => {
                                     document.body.appendChild(link);
                                     link.click();
                                     link.remove();
+                                    setLoading(false)
                                 })
                         })
                     })
-                    .catch(err => console.log(err))
+                    .catch(err => {
+                        console.log(err)
+                        setLoading(false)
+                    })
             }
         }
-        // setLoading(false)
-        // return alert(`Please select a valid version of ${name} to download!`)
     }
 
     return (
