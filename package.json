@@ -1,20 +1,39 @@
 {
-  "name": "electron-cra-example",
+  "name": "hackintosh-package-downloader",
   "version": "0.1.0",
   "private": true,
+  "productName": "Hackintosh Package Downloader",
+  "main": "electron/main.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export BROWSER=none && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-electron": "export ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "build-electron": "mkdir build/src && cp -r electron/. build/electron && cp -r src/shared/. build/src/shared",
+    "package": "electron-builder build --mac --win -c.extraMetadata.main=build/electron/main.js --publish never"
+  },
+  "build": {
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": {
+      "provider": "github",
+      "repo": "hackintosh-pkg-electron",
+      "owner": "shreyas1307"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^9.0.4",
+    "electron-builder": "^22.7.0"
   }
 }
