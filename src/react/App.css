@@ -1,0 +1,85 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: inherit;
+  min-height: 10vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: inherit;
+}
+
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: inherit; */
+  
+  color: inherit;
+}
+
+/* .package-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: inherit;
+} */
+
+.package-select {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem;
+  width: 800px;
+  display: flex;
+  /* border: 2px solid #61dafb; */
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.package-select .check {
+  display: flex;
+  align-items: baseline;
+  /* margin-right: auto; */
+}
+
+.package-select .select {
+  color: black;
+  margin-left: auto;
+  margin-right: 1rem;
+  width: 20%;
+}
+
+.package-select .select-2 {
+  color: black;
+  /* margin-left: auto; */
+  margin-right: 1rem;
+  width: 20%;
+}
+
+.package-select button, .App-header button {
+  height: 2.25rem;
+  cursor: pointer;
+  background-color: #282c34;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  color: #61dafb;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
