@@ -39,6 +39,7 @@
 } */
 
 .package-select {
+  position: relative;
   padding: 0.5rem 1rem;
   margin: 0.5rem 0.5rem;
   width: 800px;
@@ -79,7 +80,49 @@
   color: #61dafb;
 }
 
+.package-select button:disabled {
+  color: grey;
+  border-color: grey;
+}
+
 .App-link {
   color: #61dafb;
 }
 
+.loader {
+  position: absolute;
+  right: -2rem;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.loader-active {
+  position: absolute;
+  right: -2rem;
+  border: 8px solid #282c34; 
+  background-color: white;
+  border-top: 8px solid #61dafb; 
+  border-bottom: 8px solid #61dafb;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+   }
+  100% { transform: rotate(360deg); }
+}
+
+a {
+  color: #61dafb
+}
+
+a:active {
+  color: #3d8498;
+}
