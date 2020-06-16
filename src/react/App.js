@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isDisabled: false,
       appName: '',
       appVersion: '',
       isLoading: true,
@@ -79,8 +80,12 @@ class App extends Component {
     });
   }
 
+  disabledDownloadButton = (value) => {
+    this.setState({ isDisabled: value })
+  }
+
   render() {
-    const { appName, appVersion, isLoading, packageDivision } = this.state;
+    const { appName, appVersion, isLoading, packageDivision, isDisabled } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -92,7 +97,7 @@ class App extends Component {
             <li>Simply select the version from the dropdown for each of the packages</li>
             <li>Click on the Download button next to it to download!</li>
           </ul>
-          {/* <h3>For more Information on the below Kexts, visit the OpenCore guide <a href="https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html" target="_blank" rel="noopener noreferrer">here.</a></h3> */}
+          <h3>For more Information on the below Kexts, visit the OpenCore guide <a href="https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html" target="_blank" rel="noopener noreferrer">here.</a></h3>
         </div>
         <div className="App-body">
           {isLoading ? <p>Loading...</p> : (
@@ -102,7 +107,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Must Haves").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -113,7 +118,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Graphics").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -123,7 +128,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Audio").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -133,7 +138,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Ethernet").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -143,7 +148,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "USB").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -153,7 +158,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "WiFi and Bluetooth").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -163,7 +168,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "AMD CPU Specifics").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -173,7 +178,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Extras").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
@@ -183,7 +188,7 @@ class App extends Component {
                 {packageDivision.filter(x => x.section === "Laptop Specifics").map((pkg, index) => {
                   return (
                     <Fragment key={index}>
-                      <PackageSelect name={pkg.package} versionList={pkg.version} />
+                      <PackageSelect name={pkg.package} versionList={pkg.version} disabledDownloadButton={this.disabledDownloadButton} isDisabled={isDisabled} />
                     </Fragment>
                   )
                 })}
