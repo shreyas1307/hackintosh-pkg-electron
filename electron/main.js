@@ -12,7 +12,7 @@ function createWindow() {
     });
 
     mainWindow = new BrowserWindow({
-        width: 1100, height: 900, webPreferences: { preload: path.join(__dirname, 'preload.js'), devTools: false, webSecurity: true },
+        width: 1200, height: 900, webPreferences: { preload: path.join(__dirname, 'preload.js'), devTools: false, webSecurity: true },
     });
     mainWindow.webContents.openDevTools()
     mainWindow.loadURL(startUrl);
