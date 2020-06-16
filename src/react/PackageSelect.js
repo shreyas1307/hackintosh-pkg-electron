@@ -3,7 +3,7 @@ import ReactSelect from 'react-select'
 import Axios from 'axios';
 
 const PackageSelect = (props) => {
-    const { versionList, name } = props
+    const { versionList, name, disabledDownloadButton, isDisabled } = props
     const [options, setOptions] = useState([])
     const [version, setVersion] = useState(null)
     const [releaseOrDebug, setReleaseOrDebug] = useState(null)
@@ -15,10 +15,10 @@ const PackageSelect = (props) => {
     }, [versionList])
 
     function downloadPackage() {
+        disabledDownloadButton(true)
         const [versionLabel, notVersionLabel] = ["Release", "Debug"]
         setLoading(true)
         if (version !== null) {
-            console.log('here')
             if (version.downloadLink) {
                 const [user, repo] = name.split('/')
 
@@ -35,13 +35,14 @@ const PackageSelect = (props) => {
                         link.click();
                         link.remove();
                         setLoading(false)
+                        disabledDownloadButton(false)
                     })
                     .catch(err => {
                         console.log(err)
+                        disabledDownloadButton(false)
                         setLoading(false)
                     })
             } else {
-                console.log('here 2')
                 const [user, repo] = name.split('/')
                 let url = `https://hackintosh-pkg-api.herokuapp.com/github/dataByPackageName`
                 let data = {
@@ -51,7 +52,6 @@ const PackageSelect = (props) => {
                 }
                 return Axios.post(url, { ...data })
                     .then((response) => {
-                        console.log('Success')
                         let findVersion = new RegExp("(" + versionLabel + ")", "gi")
                         let dontFindNotVersion = new RegExp("(" + notVersionLabel + ")", "gi")
 
@@ -78,12 +78,14 @@ const PackageSelect = (props) => {
                                     document.body.appendChild(link);
                                     link.click();
                                     link.remove();
+                                    disabledDownloadButton(false)
                                     setLoading(false)
                                 })
                         })
                     })
                     .catch(err => {
                         console.log(err)
+                        disabledDownloadButton(false)
                         setLoading(false)
                     })
             }
@@ -124,9 +126,10 @@ const PackageSelect = (props) => {
                     }}
                 />
             </div>
-            <button onClick={downloadPackage} disabled={version !== null && releaseOrDebug !== null ? false : true}>
+            <button onClick={downloadPackage} disabled={version !== null && releaseOrDebug !== null && isDisabled === false ? false : true}>
                 Download
             </button>
+            <div className={`loader${loading ? '-active' : ''}`}></div>
         </div>
     )
 }
