@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "productName": "Hackintosh Package Downloader",
+  "description": "A GUI App built with Electron.js and React.js to download Hackintosh Packages.",
+  "author": {
+    "name": "Shreyas Balachandran",
+    "email": "shreyas.balachandran@outlook.com"
+  },
   "main": "electron/main.js",
   "homepage": "./",
   "dependencies": {
@@ -33,6 +38,23 @@
       "provider": "github",
       "repo": "hackintosh-pkg-electron",
       "owner": "shreyas1307"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
     }
   },
   "eslintConfig": {
