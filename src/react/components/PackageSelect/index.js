@@ -54,7 +54,12 @@ const PackageSelect = (props) => {
                     .then((response) => {
                         let findVersion = new RegExp("(" + versionLabel + ")", "gi")
                         let dontFindNotVersion = new RegExp("(" + notVersionLabel + ")", "gi")
-
+                        console.log(response)
+                        if (response.data.data.assets === undefined) {
+                            disabledDownloadButton(false)
+                            setLoading(false)
+                            return alert("Sorry, No Assets found for download!")
+                        }
                         let filteredUrl = response.data.data.assets
                             .filter(x => {
                                 if (findVersion.test(x.name)) {
