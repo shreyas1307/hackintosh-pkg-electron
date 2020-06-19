@@ -95,6 +95,11 @@ class App extends Component {
           <button>v{appVersion}</button>
         </header>
         <div>
+          <a href="https://github.com/shreyas1307/hackintosh-pkg-electron" target="_blank" rel="noopener noreferrer" >
+            <img src="https://img.shields.io/github/stars/shreyas1307/hackintosh-pkg-electron?style=social" />
+          </a>
+        </div>
+        <div>
           <ul>
             <li>Simply select the version from the dropdown for each of the packages</li>
             <li>Click on the Download button next to it to download!</li>
