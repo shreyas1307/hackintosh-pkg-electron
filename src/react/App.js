@@ -3,6 +3,7 @@ import Axios from 'axios'
 import './App.css';
 import { channels } from '../shared/constants'
 import PackageSelect from './PackageSelect';
+import Icon from "./icon.png"
 const { ipcRenderer } = window;
 
 class App extends Component {
@@ -89,6 +90,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <img src={Icon} height="75" alt="Hackintosh Package Downloader Logo" />
           <p>{appName}</p>{" "}
           <button>v{appVersion}</button>
         </header>
@@ -97,7 +99,7 @@ class App extends Component {
             <li>Simply select the version from the dropdown for each of the packages</li>
             <li>Click on the Download button next to it to download!</li>
           </ul>
-          <h3>For more Information on the below Kexts, visit the OpenCore guide <a href="https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html" target="_blank" rel="noopener noreferrer">here.</a></h3>
+          <h3>For more Information, Please visit the OpenCore guide <a href="https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html" target="_blank" rel="noopener noreferrer">here.</a></h3>
         </div>
         <div className="App-body">
           {isLoading ? <p>Loading...</p> : (
