@@ -1,9 +1,9 @@
 
-#  Hackintosh Package Downloader - GUI
+#  Hackintosh Package Downloader - GUI (Coming soon...)
 
-##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here]
+##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here](https://github.com/shreyas1307/hackintosh-pkg-cli)
 
-![Hackintosh Package Downloader](https://raw.githubusercontent.com/shreyas1307/hackintosh-pkg-electron/master/logo.png?token=AKZO6POLQT6NXPDM6WG2CG265RIBE)
+![Hackintosh Package Downloader](https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/logo.png?raw=true)
 
 
 ## Table of Contents
@@ -99,11 +99,11 @@ The GUI currently is able to download Latest Asset releases from the following R
 
 I would like to credit the following people for giving me the idea for this GUI and giving me constant feedback on designing the logo and the Application itself:
 
-- [@AndyLuuuuu]([https://github.com/AndyLuuuuu](https://github.com/AndyLuuuuu))
+- [@AndyLuuuuu](https://github.com/AndyLuuuuu)
 
-- [@ale8k]([https://github.com/ale8k](https://github.com/ale8k))
+- [@ale8k](https://github.com/ale8k)
 
-- [@edoardolunardi]([https://github.com/edoardolunardi](https://github.com/edoardolunardi))
+- [@edoardolunardi](https://github.com/edoardolunardi)
  
 
 # License
