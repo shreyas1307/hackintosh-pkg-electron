@@ -1,5 +1,5 @@
 
-#  Hackintosh Package Downloader - GUI
+#  Hackintosh Package Downloader - GUI (Coming soon...)
 
 ##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here](https://github.com/shreyas1307/hackintosh-pkg-cli)
 
