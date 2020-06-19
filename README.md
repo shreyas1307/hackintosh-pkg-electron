@@ -99,11 +99,11 @@ The GUI currently is able to download Latest Asset releases from the following R
 
 I would like to credit the following people for giving me the idea for this GUI and giving me constant feedback on designing the logo and the Application itself:
 
-- [@AndyLuuuuu]([https://github.com/AndyLuuuuu](https://github.com/AndyLuuuuu))
+- [@AndyLuuuuu](https://github.com/AndyLuuuuu](https://github.com/AndyLuuuuu)
 
-- [@ale8k]([https://github.com/ale8k](https://github.com/ale8k))
+- [@ale8k](https://github.com/ale8k](https://github.com/ale8k)
 
-- [@edoardolunardi]([https://github.com/edoardolunardi](https://github.com/edoardolunardi))
+- [@edoardolunardi](https://github.com/edoardolunardi](https://github.com/edoardolunardi)
  
 
 # License
