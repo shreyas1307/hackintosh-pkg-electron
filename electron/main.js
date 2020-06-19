@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const { channels } = require('../src/shared/constants')
 const path = require('path');
 const url = require('url');
@@ -10,11 +10,14 @@ function createWindow() {
         protocol: 'file:',
         slashes: true,
     });
-
+    Menu.setApplicationMenu(null)
     mainWindow = new BrowserWindow({
-        width: 1200, height: 900, webPreferences: { preload: path.join(__dirname, 'preload.js'), devTools: false, webSecurity: true },
+        autoHideMenuBar: true,
+        width: 1200, height: 900,
+        minWidth: 1200, minHeight: 900, maxWidth: 1200, maxHeight: 900, webPreferences: { preload: path.join(__dirname, 'preload.js'), devTools: false, webSecurity: true },
     });
     mainWindow.webContents.openDevTools()
+    // mainWindow.removeMenu()
     mainWindow.loadURL(startUrl);
     mainWindow.on('closed', function () {
         mainWindow = null;
