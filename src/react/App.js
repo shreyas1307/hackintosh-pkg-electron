@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter, Route, NavLink } from 'react-router-dom'
 import './App.css';
+import Icon from "./icon.png"
 import { channels } from '../shared/constants'
 import Main from './components/main';
 import GetCustom from './components/getcustom';
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={Icon} height="75" alt="Hackintosh Package Downloader Logo" />
         <p>{name}</p>{" "}
         <button>v{version}</button>
       </header>

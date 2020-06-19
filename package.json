@@ -41,6 +41,9 @@
       "repo": "hackintosh-pkg-electron",
       "owner": "shreyas1307"
     },
+    "mac": {
+      "icon": "build/icon.icns"
+    },
     "win": {
       "target": [
         {
@@ -50,13 +53,15 @@
             "ia32"
           ]
         }
-      ]
+      ],
+      "icon": "build/icon.ico"
     },
     "linux": {
       "target": [
         "AppImage",
         "deb"
-      ]
+      ],
+      "icon": "build/icon.png"
     }
   },
   "eslintConfig": {
