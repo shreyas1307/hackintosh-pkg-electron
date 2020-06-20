@@ -5,24 +5,22 @@
 
 ![Hackintosh Package Downloader](https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/logo.png?raw=true)
 
+<p align="center"><h2 align="center">Table of Contents</h2></p>
+<p align="center">
+	<a href="#about">About</a> |
+	<a href="#projects-purpose">Project's purpose</a> |
+	<a href="#special-mentions">Special Mentions</a> |
+	<a href="#packages">Packages</a> |
+	<a href="#run-the-app">Run the App</a> |
+	<a href="#faqs">FAQs</a> |
+	<a href="#authors">Authors</a> |
+	<a href="#license">License</a>
+</p>
 
-## Table of Contents
+<p align="center">
+	<img src="https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/%5BGUI%5D%20Hackintosh%20Package%20Downloader%20x800.gif?raw=true" />
+</p>
 
-- [About](#about)
-
-- [Project's purpose](#projects-purpose)
-
-- [Packages](#packages)
-
-- [Run the App](#run-the-app)
-
-- [Authors](#authors)
-
-- [Special Mentions](#special-mentions)
-
-- [License](https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/LICENSE)
-
-  
 
 ## About
 
@@ -89,7 +87,11 @@ The GUI currently is able to download Latest Asset releases from the following R
 	  * If you're on Windows, the application will simply run without any installation needed
 	  * If you're on Linux, depending on your distribution, please choose either the .deb file or you can download the .AppImage file
 
+
 ### * If you're looking for another download format, kindly open up a request [here](https://github.com/shreyas1307/hackintosh-pkg-electron/issues)
+
+# FAQs
+## Coming soon~
 
 # Authors
 
