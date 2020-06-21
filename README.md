@@ -83,7 +83,7 @@ The GUI currently is able to download Latest Asset releases from the following R
 ### For more information, please refer to the OpenCore "Gathering Files" Guide [here](https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html) for more Info.
 
 ## Downloads
-  * Simply head over to releases [here]([https://github.com/shreyas1307/hackintosh-pkg-electron/releases](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)) and download the installer for your Operating System.
+  * Simply head over to releases [here](https://github.com/shreyas1307/hackintosh-pkg-electron/releases) and download the installer for your Operating System.
 
 ## Run the App
   * Once the download is finished, simply run the application. Depending on your OS, an installation might occur. Else it'll run like a portable applicaiton
