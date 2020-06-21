@@ -1,9 +1,12 @@
 
 #  Hackintosh Package Downloader - GUI 
-[![stars](https://img.shields.io/github/downloads/shreyas1307/hackintosh-pkg-electron/total?style=for-the-badge)](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)
-[![release version](https://img.shields.io/github/v/release/shreyas1307/hackintosh-pkg-electron?style=for-the-badge)](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)
+<p align="left">
+	<a href="https://github.com/shreyas1307/hackintosh-pkg-electron/releases"><img src="https://img.shields.io/github/v/release/shreyas1307/hackintosh-pkg-electron?style=for-the-badge" /></a>
+	<a href="https://github.com/shreyas1307/hackintosh-pkg-electron/releases"><img src="https://img.shields.io/github/downloads/shreyas1307/hackintosh-pkg-electron/total?style=for-the-badge" /></a>
+</p>
 
-##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here](https://github.com/shreyas1307/hackintosh-pkg-cli)
+
+##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here](https://github.com/shreyas1307/hackintosh-pkg-cli).
 
 ![Hackintosh Package Downloader](https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/logo.png?raw=true)
 
