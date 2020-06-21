@@ -1,6 +1,7 @@
 
 #  Hackintosh Package Downloader - GUI 
 [![stars](https://img.shields.io/github/downloads/shreyas1307/hackintosh-pkg-electron/total?style=for-the-badge)](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)
+[![release version](https://img.shields.io/github/v/release/shreyas1307/hackintosh-pkg-electron?style=for-the-badge)](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)
 
 ##  A GUI App built with Electron.js and React.js to download Hackintosh Packages. Terminal App can be found [here](https://github.com/shreyas1307/hackintosh-pkg-cli)
 
@@ -12,6 +13,7 @@
 	<a href="#projects-purpose">Project's purpose</a> |
 	<a href="#special-mentions">Special Mentions</a> |
 	<a href="#packages">Packages</a> |
+	<a href="#downloads">Downloads</a> |
 	<a href="#run-the-app">Run the App</a> |
 	<a href="#faqs">FAQs</a> |
 	<a href="#authors">Authors</a> |
@@ -79,10 +81,11 @@ The GUI currently is able to download Latest Asset releases from the following R
 - [VoodooHDA]
 
 ### For more information, please refer to the OpenCore "Gathering Files" Guide [here](https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html) for more Info.
-   
 
-# Run the App
+## Downloads
   * Simply head over to releases [here]([https://github.com/shreyas1307/hackintosh-pkg-electron/releases](https://github.com/shreyas1307/hackintosh-pkg-electron/releases)) and download the installer for your Operating System.
+
+## Run the App
   * Once the download is finished, simply run the application. Depending on your OS, an installation might occur. Else it'll run like a portable applicaiton
 	  * If you're on macOS, the installer should prompt you to move the App to the Applications folder.
 	  * If you're on Windows, the application will simply run without any installation needed
@@ -91,14 +94,14 @@ The GUI currently is able to download Latest Asset releases from the following R
 
 ### * If you're looking for another download format, kindly open up a request [here](https://github.com/shreyas1307/hackintosh-pkg-electron/issues)
 
-# FAQs
-## Coming soon~
+## FAQs
+### Coming soon~
 
-# Authors
+## Authors
 
 - [@shreyas1307](https://github.com/shreyas1307) - Creator and Maintainer
 
-# Special Mentions 
+## Special Mentions 
 
 I would like to credit the following people for giving me the idea for this GUI and giving me constant feedback on designing the logo and the Application itself:
 
@@ -109,6 +112,6 @@ I would like to credit the following people for giving me the idea for this GUI 
 - [@edoardolunardi](https://github.com/edoardolunardi)
  
 
-# License
+## License
 
 The source code is released under the [MIT](https://github.com/shreyas1307/hackintosh-pkg-electron/blob/master/LICENSE).
